@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media Elements</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Media Elements</h1>
+    </header>
+    <main>
+        <h2>Audio</h2>
+        <!-- Absolute Path -->
+         <h3>Audio Element with Absolute Path</h3>
+        <audio src="https://samplelib.com/mp3/sample-15s.mp3" controls>
+
+        </audio>
+        <!-- Relative Path -->
+        <h3>Audio Element with Relative Path</h3>
+        <audio src="./audios/mixkit-hip-hop-02-738.mp3" controls ></audio>
+        <h3>Audio Element with Autoplay</h3>
+        <audio src="./audios/mixkit-hip-hop-02-738.mp3" muted autoplay controls></audio>
+        <h3>Audio Element with Loop</h3>
+        <audio src="./audios/mixkit-hip-hop-02-738.mp3" loop controls></audio>
+        
+        <h2>Video</h2>
+        <video width="500" height="300" muted autoplay loop poster="./videos/video-poster.webp" src="./videos/sample_960x400_ocean_with_audio.mp4" controls></video>
+        <h3>Video with multiple sources</h3>
+        <video width="500" height="300" muted autoplay loop poster="./videos/video-poster.webp" controls>
+            <source src="./videos/sample_960x400_ocean_with_.mp4" type="video/mp4">
+            <source src="./videos/sample_640x360.mp4" type="video/mp4">
+            <track src="./videos/subtitle.vtt" kind="subtitles" srclang="en" label="English" default />
+            <track src="./videos/subtitle-hi.vtt" kind="subtitles" srclang="hi" label="Hindi"  />
+        </video>
+
+        <h2>SVG</h2>
+        <img src="./videos/img.webp" alt="">
+        <svg width="200" height="200">
+            <circle r="90" cx="100" cy="100" stroke-width="5" fill="transparent" stroke="green"></circle>
+        </svg>
+
+        <h2>Iframe</h2>
+        <iframe src="//indixpert.com" width="380" height="700" frameborder="0"></iframe>
+        
+        <h2>Embedding a Map</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.749900551038!2d77.06133107374413!3d28.4569546920354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b80c9ebb39%3A0xecc98880a778b34a!2sIndixpert!5e0!3m2!1sen!2sin!4v1776330530887!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <h3>Embedding a Youtube video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yGlyrA9C9Nc?si=eL4ZkJh63a58M8um" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </main>
+</body>
+</html>

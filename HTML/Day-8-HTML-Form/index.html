@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Form</h1>
+    </header>
+    <main>
+        <form action="#" method="get">
+            <div>
+                <!-- <label for="firstName">First Name</label> -->
+                <input type="text" name="firstName" minlength="3" id="firstName" placeholder="Your First Name" required>
+            </div>
+            <div>
+                <!-- <label for="lastName">Last Name</label> -->
+                <input type="text" name="lastName" id="lastName">
+            </div><br/>
+            <div>
+                <label for="usermail">Email</label>
+                <input type="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" autofocus name="usermail" id="usermail" required>
+            </div><br/>
+            <div>
+                <label for="userPassword">Password</label>
+                <input type="password" minlength="6" maxlength="12" name="userPassword" id="userPassword" required>
+            </div><br/>
+            <div>
+                <label for="userAge">Age</label>
+                <input type="number" minlength="3" name="userAge" id="userAge" disabled>
+            </div><br/>
+            <div>
+                <label for="userDob">Date of Birth</label>
+                <input type="date" name="userDob" id="userDob" max="2008-04-20">
+            </div><br/>
+            <div>
+                <label>Gender</label>
+                <label for="male">
+                    <input type="radio" name="gender" value="m" id="male"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" name="gender" value="f" id="female"> Female
+                </label>
+                <label for="others">
+                    <input type="radio" name="gender" value="o" id="others"> Others
+                </label>
+            </div><br/>
+            <div>
+                <label>Skills</label>
+                <label for="clang">
+                    <input type="checkbox" name="skills" value="C Language" id="clang"> C
+                </label>
+                <label for="python">
+                    <input type="checkbox"  name="skills" id="python" value="Python"> Python
+                </label>
+                <label for="html">
+                    <input type="checkbox"  name="skills" id="html" value="HTML"> HTML
+                </label>
+            </div><br/>
+            <div>
+                <label for="city">City</label>
+                <select name="city" id="city">
+                    <option value="">Select a City</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Gurugram">Gurugram</option>
+                    <option value="Noida">Noida</option>
+                    <option value="Mirganj" selected>Mirganj</option>
+                    <option value="Bageshwar">Bageshwar</option>
+                    <option value="Jodhpur">Jodhpur</option>
+                    <option value="Aligarh">Aligarh</option>
+                </select>
+            </div><br/>
+            <div>
+                <label for="bio">Introduce Yourself</label>
+                <textarea rows="4" cols="40" name="bio" id="bio"></textarea>
+            </div><br/>
+            <!-- <input type="submit" value="Submit"> -->
+             <button type="button">Normal Button</button>
+             <button type="reset">Reset</button>
+             <button>Submit</button>
+        </form>
+    </main>
+</body>
+</html>

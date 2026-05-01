@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML List & Table</title>
+</head>
+<body>
+    <header>
+        <h1>HTML List & Table</h1>
+    </header>
+    <main>
+        <section>
+            <h2>List</h2>
+            <h3>Unordered List</h3>
+            <h4>Name of five fruits</h4>
+            <ul type="circle">
+                <li>Mango</li>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+                <li>Grapes</li>
+            </ul>
+            <h3>Ordered List</h3>
+            <h4>Name your five favoirite fruits in descending order</h4>
+            <ol type="i">
+                <li>Mango</li>
+                <li>Grapes
+                    <ul>
+                        <li>Red</li>
+                        <li>Black</li>
+                        <li>green</li>
+                    </ul>
+                </li>
+                <li>Orange</li>
+                <li>Banana</li>
+                <li>Apple</li>
+            </ol>
+            <h3>Nested List</h3>
+
+            <h3>Definition/Description/Dictionary List</h3>
+            <dl>
+                <dt><strong>HTML:</strong></dt>
+                <dd>Hypertext Markup language uses tags to strusture our webpage</dd>
+                <dt>CSS:</dt>
+                <dd>CSS stands for Cascading Styles Sheet and it is used to style our webpage</dd>
+                <dt>JS:</dt>
+                <dd>JavaScript is used to add functionality on our webpage</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Table</h2>
+            <table border>
+                <caption>Employees</caption>
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sohan</td>
+                        <td rowspan="2">Sr. Web Developer</td>
+                        <td rowspan="2">60,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mohan</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mohan</td>
+                        <td>Sr. HR</td>
+                        <td>40,000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Geeta</td>
+                        <td>Manager</td>
+                        <td>80,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Total</th>
+                        <td>1,80,000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
