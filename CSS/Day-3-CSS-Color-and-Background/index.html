@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color & Background</title>
+    <style>
+        .hex-color{
+            color: #ac3007
+        }
+        .hex-transparent{
+            color: #ac300755;
+        }
+        .rgb-color{
+            color: rgb(172, 48, 7);
+        }
+        .rgb-transparent{
+            color: rgba(172, 48, 7, .1);
+        }
+        .hsl-color{
+            /* color: hsl(120, 30%, 50%) */
+            color: hsl(15, 92%, 35%)
+        }
+        .hsl-transparent{
+            color: rgba(171, 48, 7, .1)
+        }
+        .bg-yellow{
+            background-color: yellow;
+            color: #ac300755;
+        }
+
+        .bg-image{
+            /* background-color: #f0f0f0;
+            background-image: url('./images/butterfly.jfif'); */
+            height: 400px;
+            /* background-repeat: no-repeat; */
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat; default */
+            /* background-size: cover; */
+            margin-bottom: 50px;
+            /* background-position: left center;
+            background-attachment: fixed; */
+            background: url('./images/butterfly.jfif') no-repeat left / contain fixed,
+             url('./images/parrot.jfif') no-repeat right / contain fixed
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Color & Background</h1>
+    </header>
+    <main>
+        <h2>Heading</h2>
+        <p class="hex-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facere, maxime tenetur at sunt nulla? Reprehenderit inventore quo cumque possimus?</p>
+        <p class="rgb-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque, illum accusantium quaerat perferendis sint culpa ducimus sed. Necessitatibus, minima?</p>
+        <p class="hsl-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque, illum accusantium quaerat perferendis sint culpa ducimus sed. Necessitatibus, minima?</p>
+        <p class="hex-transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+        <p class="rgb-transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+        <p class="hsl-transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+        <p class="bg-yellow">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+        <div class="bg-image">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo delectus accusantium quaerat asperiores numquam ipsa saepe repellendus nesciunt dolor veritatis!</p>
+            <p>Animi est obcaecati unde aperiam earum reprehenderit iusto veritatis dolore suscipit asperiores, doloremque minus. Molestias accusantium rerum quasi exercitationem quam.</p>
+            <p>Vel, veritatis recusandae quae officia explicabo praesentium quidem ipsam, minima tempore ab eligendi rerum cum molestiae nisi doloremque cumque maiores?</p>
+        </div>
+        <h2>Heading</h2>
+        <p class="hex-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facere, maxime tenetur at sunt nulla? Reprehenderit inventore quo cumque possimus?</p>
+        <p class="rgb-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque, illum accusantium quaerat perferendis sint culpa ducimus sed. Necessitatibus, minima?</p>
+        <p class="hsl-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque, illum accusantium quaerat perferendis sint culpa ducimus sed. Necessitatibus, minima?</p>
+        <p class="hex-transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+        <p class="rgb-transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+        <p class="hsl-transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+        <p class="bg-yellow">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
+        </p>
+    </main>
+</body>
+</html>

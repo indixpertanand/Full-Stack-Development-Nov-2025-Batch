@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        *{
+            color: red;
+
+        }
+        h2{
+            color: green;
+        }
+        p, .text-blue{
+            color: blue;
+        }
+        #main-heading{
+            background: yellow ;
+        }
+       
+        [disabled]{
+            opacity: .5;
+            cursor: default;
+            pointer-events: none;
+        }
+        input[type="number"]{
+            border-color: red
+        }
+        [class^="text"]{
+            background: cyan
+        }
+        [href$=".pdf"]{
+            color: white;
+            background-color: black;
+        }
+        [class*="text"]{
+            color: saddlebrown;
+        }
+        [class~="text"]{
+            color: saddlebrown;
+        }
+        .bg-blue{
+            background: blue;
+        }
+        .bg-blue p{
+            color: white;
+        }
+
+        .bg-blue > p{
+        background-color: yellow;
+        color: black;
+        }
+
+        /* .bg-blue h2 + p{
+            background: red
+        } */
+        .bg-blue h2 ~ *{
+            background: red
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors</h1>
+    </header>
+    <main>
+        <h2 class="abctext1">Secondary Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ab repudiandae debitis quo odit officiis eaque ratione numquam esse non.</p>
+        <h2 id="main-heading">Secondary Heading</h2>
+        <p class="para text text-blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ab repudiandae debitis quo odit officiis eaque ratione numquam esse non.</p>
+        <h3>Third Level Heading</h3>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nulla.</li>
+            <li class="text-blue">Dolor, iure obcaecati? Harum fugiat suscipit exercitationem eum, corrupti facere.</li>
+            <li class="text-blue">Incidunt sapiente aliquid ducimus? Magni saepe eos pariatur adipisci vel!</li>
+            <li class="text-blue">Quas ullam accusamus hic adipisci culpa ut iure est provident.</li>
+            <li>Repellendus, deserunt culpa? Est saepe modi dignissimos possimus, corporis libero!</li>
+        </ul>
+        <a href="#" >Indixpert</a>
+        <a href="#" disabled tabindex="-1">Google</a>
+        <a href="abc.pdf" download>Download Manual</a>
+        <form action="">
+            <input type="text" name="" placeholder="Name" id="">
+            <input type="number" name="" placeholder="Mobile No" id="" disabled>
+        </form>
+
+        <div class="bg-blue">
+            <h2>heading</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, ipsum!</p>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, ipsum!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, ipsum!</p>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, ipsum!</p>
+        </div>
+    </main>
+</body>
+</html>
