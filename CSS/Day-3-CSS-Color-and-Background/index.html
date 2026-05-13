@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Color & Background</title>
     <style>
+        
         .hex-color{
             color: #ac3007
         }
@@ -42,6 +43,39 @@
             background-attachment: fixed; */
             background: url('./images/butterfly.jfif') no-repeat left / contain fixed,
              url('./images/parrot.jfif') no-repeat right / contain fixed
+        }
+        .box{
+            width: 200px;
+            height: 150px;
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #f0f0f0
+        }
+        .box-1{
+            background-image: linear-gradient(red, blue, green);
+        }
+        .box-2{
+            /* background-image: linear-gradient(to right, red, blue, green); */
+            background-image: linear-gradient(to top, red, blue, green);
+        }
+        .box-3{
+            background-image: linear-gradient(120deg, red, blue, green);
+        }
+        .box-4{
+            background-image: linear-gradient(120deg, red 33.33%, blue 33.33% 66.66%, green 66.66%);
+        }
+        .box-5{
+            background-image: linear-gradient(120deg, rgba(255, 0, 0, .7), transparent 70%);
+        }
+
+        .box-6{
+            background-image: radial-gradient( red, blue, green);
+        }
+        .box-7{
+            background-image: radial-gradient(circle at top left, red, blue, green);
+        }
+        .box-8{
+            background-image: radial-gradient(ellipse at center, red 33.33%, blue 33.33% 66.66%, green 66.66%);
         }
     </style>
 </head>
@@ -87,6 +121,20 @@
         <p class="bg-yellow">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa fugiat sunt consequatur quis ipsum!
         </p>
+
+        <h2>Gradient Background</h2>
+        <h3>Linear Gradient</h3>
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+        <div class="box box-5"></div>
+        <h3>Radial Gradient</h3>
+        <div class="box box-6"></div>
+        <div class="box box-7"></div>
+        <div class="box box-8"></div>
+        <div class="box box-9"></div>
+        <div class="box box-10"></div>
     </main>
 </body>
 </html>

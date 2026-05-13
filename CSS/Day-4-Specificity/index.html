@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        #special{
+            color: green;
+        } 
+        .highlight{
+            color: blue;
+        }      
+        p{
+            color: red !important;
+        }
+        #container p{
+            color:darkblue;
+        }
+        section.main-section p{
+            color: red;
+        }
+        .main-section p{
+            color: green !important;
+        }
+
+        /* 
+        
+        .card .btn //
+
+        button.primary //
+        
+        #app .card .btn.primary //
+        
+        
+        */
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="highlight" id="special"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum odit vel cumque mollitia deleniti deserunt, iure rerum dolorum optio inventore.</p>
+
+    <section class="main-section">
+        <div id="container">
+            <p style="color: aqua;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quas a optio consectetur placeat labore ex nostrum alias aspernatur obcaecati?</p>
+        </div>
+    </section>
+</body>
+</html>

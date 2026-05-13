@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Images</title>
+    <style>
+        /* Responsive Image */
+        .img-responsive{
+            max-width: 100%;
+            height: auto;
+        }
+        /* Image Thumbnail */
+        .img-thumbnail{
+            border: 1px solid #e5e5e5;
+            padding: 4px;
+            border-radius: 8px;
+        }
+        .img-custom{
+            width: 200px;
+            height: 200px
+        }
+        /* Object Fit */
+        .object-fit-contain{
+            object-fit: contain;
+            background-color: black
+        }
+        .object-fit-cover{
+            object-fit: cover;
+            background-color: black
+        }
+        .rounded-circle{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Styling Images</h1>
+    </header>
+    <main>
+        <img src="./images/butterfly.jfif" class="img-responsive" alt="">
+        <img src="./images/healthy-bite-banner-image.png" class="img-responsive" alt="">
+        <img src="./images/parrot.jfif" class="img-responsive img-thumbnail" alt="">
+        <img src="./images/parrot.jfif" class="img-responsive img-custom" alt="">
+        <img src="./images/butterfly.jfif" class="img-responsive img-custom" alt="">
+        <img src="./images/parrot.jfif" class="img-responsive img-custom object-fit-contain"  alt="">
+        <img src="./images/butterfly.jfif" class="img-responsive img-custom object-fit-contain" alt="">
+        <img src="./images/parrot.jfif" class="img-responsive img-custom object-fit-cover"  alt="">
+        <img src="./images/butterfly.jfif" class="img-responsive img-custom object-fit-cover" alt="">
+        <img src="./images/parrot.jfif" class="img-responsive rounded-circle"  alt="">
+        <img src="./images/parrot.jfif" class="img-responsive img-custom object-fit-cover rounded-circle"  alt="">
+    </main>
+</body>
+</html>
