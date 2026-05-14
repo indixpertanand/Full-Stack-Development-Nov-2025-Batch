@@ -3,10 +3,108 @@
     src: url('./../fonts/Roboto-VariableFont_wdth\,wght.ttf');
 } */
 
-h1{
+*{
+    box-sizing: border-box;
+}
+body{
     font-family: "Roboto", sans-serif;
+    font-size: 1em;
+}
+h1{
+    /* font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    font-weight: 100; */
+    font: 400 italic small-caps 3rem/1.2 "Inter", sans-serif; 
+    
+    letter-spacing: -4px;
+    word-spacing: 20px;
+    text-shadow: -2px 4px 10px red;
+}
+p{
+    font-size: 30px;
+    line-height: 1.4;
+    white-space: wrap;
 }
 
-p{
-    font-family: 'Roboto';
+small{
+    font-size: .825em;
+    font-variant: small-caps;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+.text-right{
+    text-align: right
+}
+
+.text-underline{
+    text-decoration: underline;
+    text-decoration-style:wavy;
+    text-decoration-color: blueviolet;
+}
+
+.text-overline{
+    text-decoration: overline;
+    text-decoration-style:wavy;
+    text-decoration-color: blueviolet;
+}
+.text-deleted{
+    text-decoration:line-through;
+    text-decoration-style:wavy;
+    text-decoration-color: blueviolet;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-lowercase{
+    text-transform: lowercase;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+
+a:visited{
+    color: chocolate;
+}
+a:hover{
+    color: green;
+}
+a:focus{
+    outline-color: green;
+}
+
+
+li:last-child{
+    color: red;
+}
+li:first-child{
+    color: green;
+}
+
+main p:nth-child(2){
+    color: darkcyan;
+}
+
+li:nth-child(odd){ /*odd can be replaced with 2n + 1 */
+    color: crimson;
+}
+li:nth-child(even){ /*even can be replaced with 2n */
+    color: blueviolet;
+}
+
+input:optional{
+    border-color: yellowgreen
+}
+input:required{
+    border-color: orange
+}
+input:valid{
+    border-color: green
+}
+
+input:invalid{
+    border-color: red;
 }
