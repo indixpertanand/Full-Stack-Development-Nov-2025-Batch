@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(120deg, red, blue);
+            /* transform: translate(-20px, 100px) */
+            /* translate: -20px 100px; */
+
+            /* transform: rotate(120deg); */
+            /* transform: scaleY(.5) */
+
+            transform: translate(50px, 100px)  rotate(120deg) skew(-20deg);
+        }
+        main{
+            perspective: 100px;
+        }
+        .box-2{
+            width: 100px;
+            height: 100px;
+            background: aqua;
+            display: grid;
+            place-items: center;
+            transform: rotateY(10deg)
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Transform</h1>
+    </header>
+    <main>
+        <h2>Translate</h2>
+        <div class="box"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid blanditiis facilis placeat sapiente, odio commodi rem molestiae magnam temporibus cupiditate?</p>
+        <button>I'm a Button</button>
+        <br />
+        <br />
+        <br />
+        <div class="box-2">
+            <h2>Box</h2>
+        </div>
+    </main>
+</body>
+</html>

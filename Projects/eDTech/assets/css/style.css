@@ -1,0 +1,601 @@
+/* body{
+    padding: 0px;
+} */
+
+
+/* Header */
+.top-notofication{
+    margin: 15px 15px 0;
+    padding: .875rem 0;
+    border-radius: var(--border-radius, 6px);
+}
+.nav-right{
+    margin-left: auto;
+}
+#top-header{
+    margin: 0 15px 0;
+    padding: .75rem 0;
+    border-bottom: 1px solid var(--border-color)
+    /* background: var(--white) */
+}
+
+.menu-toggle{
+    width: 26px;
+    height: 18px;
+    position: relative;
+    margin-left: 8px;
+}
+.menu-toggle span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--heading-color)
+}
+.menu-toggle span:last-child{
+    bottom: 0;
+    width: 70%;
+    right: 0;
+}
+.menu-toggle span:nth-child(2){
+    top: 50%;
+    translate: 0 -30%
+}
+
+#top-header .top-menu{
+    display: none;
+}
+#top-header .top-menu a{
+    display: block;
+    padding: .5rem 1rem; 
+    border-radius: var(--border-radius);   
+}
+#top-header .top-menu .active a{
+    background: var(--border-color)
+}
+@media (min-width: 992px){
+
+    .menu-toggle{
+        display: none;
+    }
+    #top-header .top-menu{
+        display: flex;
+        margin-left: 50px;
+        gap: 6px
+    }
+    #top-header .top-menu a{
+        padding: .75rem 1.25rem;    
+    }
+        
+}
+@media (min-width: 1200px){
+    .top-notification{
+        margin: 30px 30px 0;
+    }
+    #top-header{
+        margin: 0 30px 0;
+    }
+   #top-header{
+        padding: 1rem 0;
+    }
+}
+
+
+/* Footer CSS */
+footer{
+    background: #fff
+}
+footer>.container{
+    padding-block: 100px 50px;
+    border-bottom: 1px solid var(--border-color)
+}
+
+
+footer .left-section .d-flex:not(a, span){
+    gap: 1.5rem;
+    margin-top: 1.25rem
+}
+footer .right-section .d-flex{
+    gap: .5rem;
+    margin-top: .875rem
+}
+footer :is(a, span){
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+footer a:hover{
+    color: var(--primary);
+}
+footer .left-section :is(a, span){
+    gap: .375rem;
+}
+/* footer strong{
+    font-size: 1.25rem;
+    font-weight: 600;
+} */
+footer .icon{
+    background-color: var(--body-bg);
+    border: 1px solid var(--border-color)
+}
+footer .icon:hover{
+    background-color: var(--primary);
+}
+footer .icon img{
+    transition: .4s all;
+}
+footer .icon:hover img{
+    filter: brightness(0) invert(1)
+}
+footer .footer-bottom{
+    padding-block: 50px 30px
+}
+
+footer .right-section >*{
+    flex-grow: 1;
+}
+@media (min-width: 992px){    
+    footer .right-section {
+        width: 60%
+    }
+   
+}
+@media (min-width: 1200px){    
+    footer>.container{
+        padding-block: 150px 50px;
+    }
+}
+
+
+
+/* Section Header */
+
+.section-header{
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.section-header .section-title{
+    margin-bottom: .25rem;
+}
+
+.section-header .btn-group{
+    padding: .75rem;
+    border-radius: var(--border-radius-lg);
+    gap: .5rem
+}
+
+@media (min-width: 992px){
+    .section-header header{
+        max-width: min(80%, 1200px);
+    }
+    
+    .section-header{
+        align-items: flex-end;
+        margin-bottom: 3.75rem;
+    }
+}
+@media (min-width: 1400px){
+    .section-header{
+        margin-bottom: 5rem;
+    }
+}
+
+
+/* Home Banner Section */
+
+.top-banner{
+    padding-block: 3rem 5.5rem;
+}
+.top-banner .banner-content{
+    max-width: min(100%, 965px);
+    margin-inline: auto
+}
+.top-banner .banner-heading{
+    border-radius: .5rem;
+    padding: .875rem;
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+.top-banner .banner-heading>img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    translate: -50% -50%;
+}
+.top-banner .banner-heading h1{
+    font-size: 1rem;
+    gap: 5px
+}
+.top-banner .banner-heading h1 img{
+    width: 40px
+}
+.top-banner .banner-heading .h2{
+    font-size: 1.5rem;
+}
+
+.banner-body{
+    display: grid;
+    gap: .625rem
+}
+.banner-footer{
+    gap: .75rem;
+    margin-top: 3.125rem
+}
+
+.top-banner .logo-wrapper{
+    margin-top: 30px;
+    background: var(--white);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+.top-banner .swiper-slide{
+    text-align: center;
+    padding-block: 20px;
+    border-right: 1px solid var(--border-color)
+}
+@media (max-width: 1699px){
+    .top-banner .h2{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 991px){
+    .top-banner .h2{
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px){
+    .top-banner .banner-content{
+        max-width: min(82%, 965px);
+    }
+    .top-banner .banner-heading h1 img{
+        width: auto
+    }
+}
+
+@media (min-width: 992px){
+    
+    .top-banner .banner-heading{
+        border-radius: .68rem;
+        padding-inline: .75rem;
+    }
+    .top-banner .banner-heading>img{
+        translate: -70% -70%;
+    }
+    .top-banner .logo-wrapper{
+        margin-top: 5rem;
+        padding: 24px;
+    }
+    .top-banner .banner-heading h1{
+        font-size: 2.25rem;
+        gap: 8px
+    }
+    .top-banner .banner-heading .h2{
+        font-size: 1.74rem;
+    }
+}
+@media (min-width: 1200px){
+    .top-banner .swiper-slide:last-child{
+        border: none
+    }
+}
+@media (min-width: 1400px){
+    .top-banner .banner-heading{
+        border-radius: .68rem;
+        padding: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    .banner-footer{
+        margin-top: 3.75rem
+    }
+    .top-banner .logo-wrapper{
+        margin-top: 3rem;
+        padding: 30px;
+        border-radius: var(--border-radius);
+    }
+    .top-banner .banner-heading h1{
+        font-size: 3rem;
+        gap: 8px
+    }
+    .top-banner .banner-heading .h2{
+        font-size: 2.375rem;
+    }
+}
+
+
+/* video-intro */
+.video-intro video{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1596/790;
+    object-fit: cover;
+}
+
+/* Benefits */
+
+.benefits-wrapper{
+    gap: 20px; 
+}
+.benefit-card{
+    background-color: var(--white);
+    padding: 1.875rem;
+    border-radius: .625rem;
+}
+.benefit-card .card-title{
+    margin-bottom: .625rem;
+}
+.benefit-card .card-header{
+    font-size: 3.125rem;
+    font-weight: 600;
+}
+
+
+@media (min-width: 575px){
+    .benefits-wrapper{
+        --columns: 2
+    }
+}
+@media (min-width: 992px){
+    .benefits-wrapper{
+        --columns: 3
+    }
+}
+@media (min-width: 1200px){    
+    .benefit-card{
+        padding: 2.5rem
+    }
+    .benefit-card .card-header{
+        font-size: 3.75rem;
+    }
+
+}
+
+.course-card, .testimonial-card,  .testimonial-card :where(.card-body, .card-footer){
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.course-card .content-top{
+    margin-bottom: 1.5rem;
+}
+.course-card a{
+    margin-top: 1.5rem;
+}
+.course-card h3{
+    margin-bottom: .625rem;
+}
+
+@media (min-width: 768px){
+    .courses-wrapper, .testimonials-wrapper{
+        --columns: 2
+    }
+}
+@media (min-width: 1200px){
+    .course-card, .testimonial-card :where(.card-body, .card-footer){
+        padding: 2.5rem
+    }
+}
+@media (min-width: 1400px){
+    .courses-wrapper{
+        gap: 30px
+    }
+    .course-card .content-top{
+        margin-bottom: 1.875rem;
+    }
+    .course-card a{
+        margin-top: 1.875rem;
+    }
+    .course-card, .testimonial-card :where(.card-body, .card-footer){
+        padding: 3.125rem;
+    }
+}
+
+.testimonial-card{
+    background: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.testimonial-card .card-body{
+    flex-grow: 1;
+}
+.testimonial-card :where(.card-body, .card-footer){
+    border-radius: 0;
+}
+.testimonial-card .card-footer{
+    padding-block: 1.875rem;
+    background: var(--gray-light);
+    border-top: 1px solid var(--border-color)
+}
+.testimonial-card .card-footer .author{
+    gap: .625rem
+}
+
+@media (min-width: 1400px){
+    .testimonial-card .card-footer .author{
+        gap: 1rem
+    }
+}
+
+@media (max-width: 991px){
+    .testimonials-wrapper span.fs-5{
+        font-size: 1rem;
+    }
+}
+/* Pricing  */
+.pricing-wrapper{
+    padding: 1.25rem
+}
+.pricing-card{
+    background: var(--gray-light);
+    padding: 1.875rem 1.25rem 1.25rem
+}
+.pricing-card .plan-name{
+    background: var(--primary-light);
+    border-color: rgba(var(--primary-rgb), .2);
+    padding: .75rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.875rem;
+}
+.pricing-card .price{
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.pricing-card .plan-type{
+    font-size: .875rem;
+}
+
+.pricing-card .pricing{
+    margin-bottom: 1.875rem;
+}
+.pricing-card .features{
+    padding: 1.25rem;
+    border-radius: 14px 14px 0 0 ;
+}
+.pricing-card .features h4{
+    margin-bottom: 1.25rem;
+}
+.pricing-card .btn{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.pricing-card  ul{
+    width: fit-content;
+    margin-inline: auto;
+    display: grid;
+    gap: 20px
+}
+.pricing-card ul li{
+    display: flex;
+    gap: .75rem;
+    align-items: flex-start;
+    border: 1px solid var(--border-color);
+    padding: .75rem;
+    border-radius: var(--border-radius-lg);
+}
+.pricing-card ul li span{
+    background: var(--primary-light);
+}
+
+
+@media (min-width: 992px){
+   .pricing-wrapper{
+        --columns: 2;
+    } 
+}
+@media (min-width: 1200px){
+   .pricing-wrapper{
+        padding: 3.125rem
+    } 
+    .pricing-card{
+        padding: 2.5rem 1.5rem 1.5rem
+    }
+    .pricing-card .plan-name{
+        margin-bottom: 3.125rem;
+    }
+    .pricing-card .price{
+        font-size: 3.75rem;
+    }
+    .pricing-card .plan-type{
+        font-size: 1rem;
+    }
+        
+    .pricing-card .pricing{
+        margin-bottom: 3.125rem;
+    }
+    .pricing-card .features{
+        padding: 1.875rem
+    }
+}
+@media (min-width: 1700px){
+   .pricing-wrapper{
+        padding: 5rem
+    } 
+    .pricing-card{
+        padding: 3.125rem 1.875rem 1.875rem
+    }
+    .pricing-card .price{
+        font-size: 5rem;
+    }
+    .pricing-card .plan-type{
+        font-size: 1.25rem;
+    }
+    .pricing-card .features{
+        padding: 2.5rem
+    }
+    .pricing-card .features h4{
+        margin-bottom: 1.875rem;
+    }
+}
+
+.faqs .wrapper{
+    padding: 1.5rem;
+    gap: 2.5rem
+}
+.faqs .h1{
+    line-height: 1.2;
+    margin-bottom: .625rem;
+}
+.faqs .left-section a{
+    margin-top: 50px;
+    border-color: var(--border-color)
+}
+.faqs .faq{
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.faq .faq-content{
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color)
+}
+.faq .faq-content a{
+    margin-top: 1.25rem
+}
+.faq-heading .icon{
+    background: var(--primary-light)
+}
+.faq:not(.show) .faq-body{
+    display: none;
+}
+
+@media (min-width: 1200px){
+    .faqs .wrapper{
+        padding: 5rem;
+        gap: 5rem
+    }
+    .faqs .faq{
+        padding: 2.5rem
+    }
+    .faq .faq-content{
+        padding-top: 2.5rem;
+    }
+     .faq .faq-content a{
+        margin-top: 2.5rem
+     }
+}
+
+@media (min-width: 1700px){
+    .faqs .wrapper{
+        padding: 6.25rem;
+        gap: 7.5rem
+    }
+    .faqs .faq{
+        padding: 3.125rem
+    }
+    .faq .faq-content{
+        margin-top: 1.5rem;
+        padding-top: 3.125rem;
+    }
+     .faq .faq-content a{
+        margin-top: 3.125rem
+     }
+}

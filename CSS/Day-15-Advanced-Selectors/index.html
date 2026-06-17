@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        li:not(:nth-child(3), :nth-child(5)){
+            color:red
+        }
+        .img-responsive{
+            max-width: 100%;
+            height: auto;
+        }
+        .d-flex{
+            display: flex;
+            gap: 20px
+        }
+        .card{
+            max-width: 300px;
+            border: 1px solid #e0e0e0
+        }
+        .card-content{
+            padding: 10px 
+        }
+        /* :not(.card img) p{
+            font-size: 20px;
+        } */
+        .card:not(:has(.img-responsive)) p{
+            font-size: 30px;
+        }
+
+        /* section  h2, section h3, section h4{
+            color: blue
+        } */
+        /* section :is(h2, h3, h4){
+            color: blue
+        } */
+        section :where(h2, h3, h4){
+            color: blue
+        }
+
+        .masking{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px
+        }
+
+        .masking div:first-child{
+            mask-image: url('./shape-1.png');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+        .masking div:nth-child(2){
+            mask-image: linear-gradient(to right, red 50%, transparent 50%);
+            mask-size: 5px 5px;
+        }
+        .masking div:nth-child(3){
+            mask-image:url('./shape-1.png'), linear-gradient(to right, red 50%, transparent 50%);
+            mask-size: contain, 5px 5px;
+            mask-repeat: no-repeat, repeat;
+            mask-position: center, center;
+            mask-composite: exclude;
+        }
+        .masking div:nth-child(4){
+            mask: conic-gradient(red 25%, transparent 25% 50%, green 50% 75%, transparent 75%) center / 50px 50px;
+            mask-composite: exclude;
+        }
+    </style>
+</head>
+<body>
+    
+    <header><h1>Advanced Selectors & Masking</h1></header>
+    <main>
+        <h2>:not() pseudo selector</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, veritatis.</li>
+            <li>A quas architecto iste ullam tempora aliquid eius sunt libero.</li>
+            <li>Sint praesentium ea saepe nam voluptate excepturi velit eos aliquam.</li>
+            <li>Ut repudiandae perspiciatis numquam ratione omnis debitis itaque, dolores hic?</li>
+            <li>Sint, omnis voluptas suscipit minima officiis optio commodi ipsum vel!</li>
+        </ul>
+        <h2>:has() pseudo selector</h2>
+        <div class="card-wrapper d-flex">
+            <div class="card">
+                <img src="./butterfly.jfif" class="img-responsive" alt="">
+                <div class="card-content">
+                    <h3>Card Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repellat cupiditate aperiam.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Card Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repellat cupiditate aperiam.</p>
+                </div>
+            </div>
+        </div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error commodi, quaerat labore rerum amet non asperiores dignissimos id voluptatum porro laudantium iure unde, suscipit praesentium consequuntur distinctio aliquam dicta modi.</p>
+        <section>
+            <h2>Section Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi enim asperiores aut ipsum architecto cum sed ullam, natus facere quae iste incidunt. Consectetur debitis cupiditate distinctio quos, incidunt ut.</p>
+            <div class="d-flex">
+                <div class="box">
+                    <h3>Subtitle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dicta.</p>
+                </div>
+                <div class="box">
+                    <h3>Subtitle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dicta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Masking</h2>
+            <div class=" masking">
+                <div>
+                    <img src="./butterfly.jfif" alt="">
+                </div>
+                <div>
+                    <img src="./butterfly.jfif" alt="">
+                </div>
+                <div>
+                    <img src="./butterfly.jfif" alt="">
+                </div>
+                <div>
+                    <img src="./butterfly.jfif" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+header{
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; */
+    margin-bottom: -70px;
+    height: 70px;
+    border: 1px solid #bbb;
+}
+.d-flex{
+    display: flex;
+}
+/* main{
+    display: flex;
+} */
+main .sidebar{
+    max-width: 300px;
+    width: 25%;
+    background: black;
+}
+
+main .main-content{
+    flex-grow: 1;
+    /* padding-top: 90px;
+    padding-inline: 30px */
+    padding: 90px 30px 30px
+}
+
+.banner{
+    height: 200px;
+    background-color: #bbb;
+    border-radius: 8px;
+}
+section{
+    margin-top: 60px
+}
+.section-1 {
+    justify-content: space-between;
+}
+.section-1 .left-panel{
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px
+}
+.section-1 .left-panel .panel-top, .section-1 .left-panel .panel-bottom{
+    gap: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px;
+}
+.section-1 .box{
+    width: 33%;
+    /* height: 120px; */
+    aspect-ratio: 1/1;
+    background-color: #bbb;
+    border-radius: 8px;
+}
+.left-panel .panel-bottom{
+    width: 90%;
+    align-items: center;
+}
+.left-panel .panel-bottom .box:first-child{
+    aspect-ratio: 3/2;
+    width: 60%;
+}
+.left-panel .panel-bottom .box:last-child{
+    aspect-ratio: 3/2;
+    width: 40%;
+}
+
+.section-1 .right-panel{
+    width: 45%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-direction: column;
+}
+.section-1 .right-panel .panel-top{
+    background-color: #bbb;
+    min-height: 200px;
+    /* border-radius: 8px 8px 0 0; */
+}
+.section-1 .right-panel .panel-bottom{
+    min-height: 230px;
+    flex-grow: 1;
+}
+
+.section-2{
+    background: #dbdbdb;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.section-2 .box{
+    width: 20%;
+    height: 200px;
+    background: #bbb;
+    border-radius: 8px;
+}
+
+.section-2 .box:first-child{height: 130px}
+.section-2 .box:nth-child(2){flex-direction: column; overflow: hidden;}
+.section-2 .box:nth-child(2)>*{
+    flex-grow: 1;
+}
+
+.section-2 .box:nth-child(2) .panel-bottom{
+    background-color: #fff;
+}
+
+.section-2 .box:nth-last-child(2){
+    background-color: white;
+}
+.section-2 .box:last-child{
+    width: 10%;
+    height: 130px;
+    background-color: white;
+    align-self: center
+}

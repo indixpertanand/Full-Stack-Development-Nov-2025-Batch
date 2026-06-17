@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: .5em;
+}
+
+.container{
+    max-width: 92%;
+    margin-inline: auto;
+}
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red
+}
+.h-auto{
+    height: auto;
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-wrap{
+    flex-wrap:wrap-reverse;
+    /* row-gap: 20px;
+    column-gap: 10px; */
+    /* gap: 20px 10px; */
+}
+.justify-start{
+    justify-content: flex-start;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.justify-evenly-column{
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 80vh
+}
+
+.align-stretch{
+    align-items: stretch;
+}
+.align-start{
+    align-items: start;
+}
+.align-center{
+    align-items: center;
+}
+.align-end{
+    align-items: end;
+}
+
+.flex-column .box{
+    width: auto;
+}
+
+.align-content{
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* align-items: center; */
+    background: #f0f0f0;
+    align-content: center;
+}
+
+.align-content .box{
+    width: 33%;
+}
+
+
+.order-1{
+    order: 1;
+}
+.order-2{
+    order: 2;
+}
+.order-3{
+    order: 3;
+}
+.order-4{
+    order: 4;
+}
+
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+.flex-shrink-0{
+    flex-shrink: 0;
+}
+
+.responsive-flex{
+    flex-wrap: wrap;
+}
+.responsive-flex .flex-items{
+    /* flex-basis: 80px;
+    flex-grow: 1 */
+    flex: 1 1 80px
+}
+.border{
+    border: 1px solid red
+}
+.flex-items{
+    padding: 20px
+}
+
+.align-self-container{
+    gap: 30px
+}
+.align-self-container .flex-items{
+    width: 25%;
+    /* flex-shrink: 0; */
+}
+.align-self-container .flex-items:first-child{
+    align-self: center;
+}
+.align-self-container .flex-items:nth-child(2){
+    align-self: stretch;
+}

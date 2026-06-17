@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Media Query</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+       
+    <style>
+        :root{
+            --primary: red;
+            --text-primary: #fff;
+            --secondary: black;
+            --text-secondary: #fff;
+            --accent: blue;
+            --body-color: #3c3334;
+            --white: #fff;
+            --black: #000;
+            --font-family-base: "Roboto", sans-serif;
+            --font-family-heading: "Inter", sans-serif;
+            --btn-padding-y: .5rem;
+            --btn-padding-x: 1rem;
+            --btn-font-size: 1rem;
+            --border-color: #e0e0e0
+
+        }
+        body{
+            font-family: var(--font-family-base);
+            color: var(--body-color)
+        }
+        a{
+            text-decoration: none;
+        }
+        h1, h2, h3, h4, h5, h6{
+            font-family: var(--font-family-heading);
+        }
+
+        .text-primary{
+            color: var(--primary)
+        }
+        .bg-primary{
+            background-color: var(--primary);
+            color: var(--text-primary)
+        }
+        .btn{
+            --btn-color:var(--body-color);
+            --btn-bg-color: transparent;
+            --btn-border-color: var(--border-color);
+            --btn-hover-color:var(--body-color);
+            --btn-hover-bg-color: transparent;
+            --btn-hover-border-color: var(--border-color);
+            display: inline-block;
+            padding: var(--btn-padding-y) var(--btn-padding-x);
+            color: var(--btn-color);
+            background-color: var(--btn-bg-color);
+            border: 1px solid var(--btn-border-color);
+            transition: .4s all;
+            line-height: 1;
+            font-size: var(--btn-font-size);
+        }
+        .btn:hover{
+            color: var(--btn-hover-color);
+            background-color: var(--btn-hover-bg-color);
+            border-color: var(--btn-hover-border-color)
+        }
+        .btn-primary{
+            --btn-color: var(--text-primary);
+            --btn-bg-color: var(--primary);
+            --btn-border-color: var(--primary);
+            --btn-hover-color: var(--white);
+            --btn-hover-bg-color: var(--secondary);
+            --btn-hover-border-color: var(--secondary);
+        }
+        .btn-secondary{
+            --btn-color: var(--text-secondary);
+            --btn-bg-color: var(--secondary);
+            --btn-border-color: var(--secondary);
+            --btn-hover-color: var(--white);
+            --btn-hover-bg-color: var(--primary);
+            --btn-hover-border-color: var(--primary);
+        }
+
+
+        /* Desktop First Approach */
+        .d-flex{
+            display: flex;
+            margin-top: 30px;
+            gap: 20px
+        }
+        .box{
+            border: 1px solid #e0e0e0;
+            height: 200px;
+            flex-grow: 1
+        }
+        @media all and (max-width: 992px){
+            .d-flex{
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+            }
+            .section-first .box{
+                width: 100%
+            } 
+            .section-two .box{
+                width: 45%
+            }      
+        }
+        @media all and (max-width: 575px){            
+            .section-two .box{
+                width: 100%
+            }      
+        }
+
+        /* Mobile First approach */
+        .section-third, .section-forth{
+            flex-direction: column;
+        }
+        @media (min-width: 576px){
+            .section-forth{
+                flex-direction: row;
+            }
+            .section-forth .box{
+                width: 45%
+            }
+        }
+        @media (min-width: 992px){
+            .section-third{
+                flex-direction: row;
+            }
+            .section-third .box{
+                width: 45%
+            }
+            .section-forth .box{
+                width: 20%
+            }
+        }
+
+        @media print{
+            :root{
+            --primary: blue;
+            --text-primary: #fff;
+            }
+            .section-forth, .section-third{
+                display: none;
+            }
+            .box{
+                background-color: #f0f0f0
+            }
+        }
+
+        @media print and (orientation: landscape){
+             :root{
+                --primary: purple;
+                --text-primary: #fff;
+            }
+        }
+        @media (orientation: landscape){
+             :root{
+                --primary: purple;
+                --text-primary: #fff;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="bg-primary"><h1>Variables & Media Query</h1></header>
+    <main>
+        <h2 class="text-primary">Color</h2>
+        <button class="btn">Click me</button>
+        <button class="btn btn-primary">Click me</button>
+        <a href="#" class="btn btn-secondary">Click me</a>
+
+        <div class="d-flex section-first">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d-flex section-two">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d-flex section-third">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d-flex section-forth">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </main>
+
+</body>
+</html>
